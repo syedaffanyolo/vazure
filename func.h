@@ -1,6 +1,6 @@
 
 //#include "vars.h"
-
+//ok
 
 void ToneOut(int pitch, int duration){  // pitch in Hz, duration in ms
   int delayPeriod;
