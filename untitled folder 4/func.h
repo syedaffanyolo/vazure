@@ -33,7 +33,8 @@ void ready(){
  
   
    //10 SECOND TIMER TILL IGNITION
- 
+   
+ //add a func for flight abort after 5 sec.
   
     digitalWrite(py2,HIGH);
 

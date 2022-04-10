@@ -1,7 +1,7 @@
 //functions 
 
 #include "math.h"
-#include <vector_type.h>
+//#include <vector_type.h>
 
 
 void fig(){
@@ -52,17 +52,19 @@ yaw = gr.gyro.z;
 //  gyroAngleX = gyroAngleX + gr.gyro.x * elaptime; 
 //  gyroAngleY = gyroAngleY + gr.gyro.y * elaptime;
 //  filteryaw =  yaw + gr.gyro.z * elaptime;
-Serial.print("yaw: ");
-Serial.print(yaw);
+Serial.print(crtime);
+Serial.print(",");
+Serial.print(gr.gyro.x);
 Serial.print(",");
 //  // Complementary filter - combine acceleromter and gyro angle values
 //  filterroll = 0.96 * gyroAngleX + 0.04 * roll;
 //  filterpitch = 0.96 * gyroAngleY + 0.04 * pitch;
-Serial.print(" pitch: ");
-Serial.print(pitch);
+//Serial.print(" pitch: ");
+Serial.print(gr.gyro.y);
 Serial.print(",");
-Serial.print(" roll: ");
-Serial.println(roll);
+//Serial.print(" roll: ");
+Serial.println(gr.gyro.z);
+
  myFile = SD.open("gor.csv",FILE_WRITE);
     String dataString = String(alt);
     String dataStringtimeee = String(crtime);
@@ -151,7 +153,7 @@ delay(200);
 digitalWrite(buzz,LOW);
 fig();
  //here is ejection charge sequence
-
+//aaaaaaaa fuck
  donee = true;
   }
     while(touchdownloop == true){
